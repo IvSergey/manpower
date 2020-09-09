@@ -1,0 +1,29 @@
+.hero
+  .hero__content.container
+    .hero__title
+      h1.hero__title-text Banner header
+      p.hero__desc-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+    .hero__feedback
+      .hero__form
+        form(action="" method="").ui-form#requestForm
+          h3.hero__fedback-title Request form
+          .form-row
+            input(required autocomplete="off" name="email")#email
+            label(for="email") Enter your E-mail
+            .error
+          .form-row
+            input(autocomplete="off" type="text" name="name")#name
+            label(for="name" ) Enter your Name
+            .error
+          .form-row 
+            select#country
+              option Select your country
+              option(value="Russia") Russia
+              option(value="Germany") Germany
+              option(value="France") France
+          .form-check    
+            input(type="checkbox") 
+            span.form__block-title I agree with Terms &#38; Conditions
+          .hero__btns
+            button#btnSubmit Submit
+            a Hyperlink

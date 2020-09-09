@@ -1,0 +1,199 @@
+.hero{
+    min-height: 50vh;
+    
+    background-image: url('../../img/background/hero-bg.png');
+    background-size: cover;
+        @include laptops(){
+          min-height: 52vh;
+    }
+        @include phones(){
+          min-height: 82vh;
+    }
+}
+
+.hero__content{
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    @include tablets(){
+      padding-top: 10%;
+    }
+    @include phones() {
+      flex-direction: column;
+    }
+}
+
+
+
+.hero__title{
+    width: 49%;
+    margin-left: 2%;
+    @include phones() {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+}
+
+.hero__desc-text{
+    color: #fff;
+    font-size: 1.125rem;
+    @include phones() {
+      font-size: 1rem;
+      width: 70%;
+    }
+}
+
+.hero__feedback{
+    width: 55%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+    @include phones() {
+      width: 100%;
+      justify-content: center;
+    }
+}
+
+.hero__form{
+  @include phones() {
+    width: 100%;
+   
+  }
+}
+
+.form-check{
+    display: flex;
+    align-items: center;
+}
+
+.form-check input{
+    width: 20px;
+    height: 20px;
+}
+
+.hero__title-text{
+    margin-top: 0;
+    font-family: Arial;
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    @include tablets() {
+      font-size: 2rem;
+    }
+    &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+    }
+
+}
+
+.form__block-title{
+    margin-left: 10px;
+    color: #aaaaaa;
+}
+
+.hero__btns{
+    margin-top: 20px;
+    
+}
+
+
+.ui-form {
+    // max-width: 350px;
+    padding: 25px 20px;
+    border-radius: 5px;
+    background: white;
+  }
+  .ui-form h3 {
+    position: relative;
+    z-index: 5;
+    margin: 0 0 60px;
+    color: #4488bb;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .form-row {
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    // &:after{
+    //     content: "";
+    //     position: absolute;
+    //     width: 10px;
+    //     height: 10px;
+    //     background-color: red;
+    // }
+
+    @include phones(){
+      margin-bottom: 21px;
+    }
+  }
+  .form-row input {
+    display: block;
+    width: 100%;
+    padding: 0 10px;
+    line-height: 40px;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.2s ease;
+    
+  }
+
+  .form-row select{
+    height: 44px;
+    width: 100%;
+    color: #aaaaaa;
+    font-size: 1.25rem;
+    padding-left: 13px;
+  }
+
+  .form-row label {
+    position: absolute;
+    left: 13px;
+    color: #aaaaaa;
+    font-size: 1.25rem;
+    font-weight: 300;
+    transform: translateY(-35px);
+    transition: all 0.2s ease;
+  }
+  .form-row input:focus {
+    outline: 0;
+    border-color: #F77A52;
+  }
+  .form-row input:focus + label, 
+  .form-row input:valid + label {
+    transform: translateY(-60px);
+    margin-left: -14px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    outline: 0;
+    border-color: #F77A52;
+    color: #F77A52;
+  }
+  .hero__btns button[type="submit"] {
+    height: 30px;
+    width: 50%;
+    border-radius: 5px;
+    border:none;
+    background: #376d97;
+    color: white;
+  }
+
+.hero__btns a{
+    margin-left: 10%;
+    color: #aaaaaa;
+}
+
+  .ui-form p {
+    margin: 0;
+    padding-top: 10px;
+  }
+
