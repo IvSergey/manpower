@@ -21,26 +21,40 @@
       <div class="hero__form">
         <form class="ui-form" action="" method="" id="requestForm">
           <h3 class="hero__fedback-title">Request form</h3>
-          <div class="form-row">
-            <input required autocomplete="off" name="email" id="email">
+          <div class="form-row" id="inputEmail">
+            <input autocomplete="off" name="email" id="email">
             <label for="email">Enter your E-mail</label>
-            <div class="error"></div>
+            <div class="dropdown" id="errorEmail">
+              <div class="triangle"></div>
+              <div class="dropdown__error">Enter correct E-Mail</div>
+            </div>
           </div>
-          <div class="form-row">
+          <div class="form-row" id="inputName">
             <input autocomplete="off" type="text" name="name" id="name">
             <label for="name">Enter your Name</label>
-            <div class="error"></div>
+            <div class="dropdown" id="errorName">
+              <div class="triangle"></div>
+              <div class="dropdown__error">This field can only contain Russian and English characters, spaces, and hyphens</div>
+            </div>
           </div>
-          <div class="form-row"> 
+          <div class="form-row" id="inputCountry"> 
             <select id="country">
               <option>Select your country</option>
               <option value="Russia">Russia</option>
               <option value="Germany">Germany</option>
               <option value="France">France</option>
+              <div class="dropdown" id="inValidSelected">
+                <div class="triangle"></div>
+                <div class="dropdownError">Select Country</div>
+              </div>
             </select>
           </div>
           <div class="form-check">   
             <input type="checkbox"><span class="form__block-title">I agree with Terms &#38; Conditions</span>
+            <div class="dropdown" id="inValidChecked">
+              <div class="triangle"></div>
+              <div class="dropdownError">This field should be checked</div>
+            </div>
           </div>
           <div class="hero__btns">
             <button id="btnSubmit">Submit</button><a>Hyperlink</a>
@@ -135,7 +149,8 @@
     </div>
   </div>
 </div>
-<div class="modal" id="modal" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" role="dialog">
+<div class="modal closed" id="modal" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" role="dialog">
+  <button class="close-button" id="close-button" title="Закрыть модальное окно">&Zcy;&acy;&kcy;&rcy;&ycy;&tcy;&softcy;</button>
   <div class="modal-guts" role="document">
     <h1>External link</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo </p>

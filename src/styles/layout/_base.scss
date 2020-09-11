@@ -34,6 +34,11 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  .wrapper.active{
+    overflow: hidden;
+    background-color: aqua;
+  }
   
   *, *::before, *::after { 
     box-sizing: border-box; 

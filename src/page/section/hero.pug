@@ -7,23 +7,33 @@
       .hero__form
         form(action="" method="").ui-form#requestForm
           h3.hero__fedback-title Request form
-          .form-row
-            input(required autocomplete="off" name="email")#email
+          .form-row#inputEmail
+            input(autocomplete="off" name="email")#email
             label(for="email") Enter your E-mail
-            .error
-          .form-row
+            .dropdown#errorEmail
+              .triangle
+              .dropdown__error Enter correct E-Mail
+          .form-row#inputName
             input(autocomplete="off" type="text" name="name")#name
             label(for="name" ) Enter your Name
-            .error
-          .form-row 
+            .dropdown#errorName
+              .triangle
+              .dropdown__error This field can only contain Russian and English characters, spaces, and hyphens
+          .form-row#inputCountry 
             select#country
               option Select your country
               option(value="Russia") Russia
               option(value="Germany") Germany
               option(value="France") France
+              .dropdown#inValidSelected
+                .triangle
+                .dropdownError Select Country
           .form-check    
             input(type="checkbox") 
             span.form__block-title I agree with Terms &#38; Conditions
+            .dropdown#inValidChecked
+              .triangle
+              .dropdownError This field should be checked
           .hero__btns
             button#btnSubmit Submit
             a Hyperlink
