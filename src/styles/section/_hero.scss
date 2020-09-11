@@ -8,7 +8,7 @@
           background-size: cover;
     }
         @include phones(){
-          min-height: 82vh;
+          min-height: 90vh;
           background-size: cover;
     }
 }
@@ -67,6 +67,7 @@
 .form-check{
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .form-check input{
@@ -244,14 +245,14 @@
   &:before{
     content: "";
     width: 255px;
-    height: 50px;
-    border: 1px solid #bb4444;
+    height: 54px;
+    border: 2px solid #bb4444;
     position: absolute;
     left: -106px;
-    top: -55px;
+    top: -56px;
     @include phones(){
-      width: 300px;
-      left: -126px;
+      width: 328px;
+      left: -136px;
     }
   }
 

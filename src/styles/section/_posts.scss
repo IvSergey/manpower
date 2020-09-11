@@ -1,6 +1,9 @@
 .posts{
     margin-top: 5%;
     margin-bottom: 5%;
+    @include phones(){
+        margin-bottom: 0;
+    }
 }
 
 .post__block{
