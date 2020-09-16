@@ -144,7 +144,7 @@
     display: block;
     width: 100%;
     padding: 0 10px;
-    line-height: 50px;
+    height: 50px;
     font-family: 'Arial', sans-serif;
     transition: all 0.2s ease;
     
@@ -244,8 +244,8 @@
 	left: 45%;
   &:before{
     content: "";
-    width: 255px;
-    height: 54px;
+    width: 256px;
+    height: 52px;
     border: 2px solid #bb4444;
     position: absolute;
     left: -106px;

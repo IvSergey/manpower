@@ -61,7 +61,8 @@ form.addEventListener('submit', function (e) {
 
 
   let reg1 = new RegExp('^.*[^A-zА-яЁё -].*$');
-  let reg2 = /^([A-Za-z0-9_\-\])+@([A-Za-z0-9_\-\])+([A-Za-z]{2,4})$/;
+  // let reg2 = /^([A-Za-z0-9_\-\])+@([A-Za-z0-9_\-\])+([A-Za-z]{2,4})$/;
+  let reg2 = /^[\w-\]+@[\w-]+\.[a-z]{2,4}$/i;
 
   let errors = 0;
   let failedName = 0;
@@ -97,20 +98,29 @@ form.addEventListener('submit', function (e) {
 
   if (failedName > 0) {
     errorName.classList.add('active');
-    setTimeout(() => errorName.classList.remove('active'), 3000);
+    setTimeout(function() {
+      return errorName.classList.remove('active'); 
+    },3000);
+    
   }
   if (failedEmail > 0) {
     errorEmail.classList.add('active');
-    setTimeout(() => errorEmail.classList.remove('active'), 3000);
+    setTimeout(function() {
+      return errorEmail.classList.remove('active');
+    }, 3000);
   }
   if (failedCountry > 0) {
     // alert('');
     inValidSelected.classList.add('active');
-    setTimeout(() => inValidSelected.classList.remove('active'), 3000);
+    setTimeout(function() {
+      return inValidSelected.classList.remove('active');
+    }, 3000);
   }
   if (failedCheckbox > 0) {
     inValidChecked.classList.add('active');
-    setTimeout(() => inValidChecked.classList.remove('active'), 3000);
+    setTimeout(function () {
+      return inValidChecked.classList.remove('active');},
+    3000);
   }
 
 
